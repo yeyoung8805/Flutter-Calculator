@@ -78,7 +78,6 @@ class _WidgetExampleState extends State<WidgetApp> {
                             MaterialStateProperty.all(Colors.amber)),
                     onPressed: () {
                       setState(() {
-                        // int result = int.parse(value1.value.text) + int.parse(value2.value.text);
                         var value1Int = double.parse(value1.value.text);
                         var value2Int = double.parse(value2.value.text);
                         var result;
