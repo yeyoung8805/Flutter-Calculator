@@ -22,6 +22,10 @@ class WidgetApp extends StatefulWidget {
 }
 
 class _WidgetExampleState extends State<WidgetApp> {
+  String sum = '';
+  TextEditingController value1 = TextEditingController();
+  TextEditingController value2 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,12 +42,25 @@ class _WidgetExampleState extends State<WidgetApp> {
               ),
               Padding(
                 padding: EdgeInsets.only(left: 20, right: 20),
-                child: TextField(),
+                child: TextField(
+                    keyboardType: TextInputType.number, controller: value1),
               ),
               Padding(
-                  padding: EdgeInsets.all(15),
-                  child:
-                      ElevatedButton(child: const Text(''), onPressed: () {}))
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: TextField(
+                    keyboardType: TextInputType.number, controller: value2),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: ElevatedButton(
+                    child: Row(
+                      children: <Widget>[Icon(Icons.add), Text('더하기')],
+                    ),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.amber)),
+                    onPressed: () {}),
+              )
             ],
           ),
         ),
