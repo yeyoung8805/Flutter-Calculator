@@ -32,9 +32,18 @@ class _WidgetExampleState extends State<WidgetApp> {
         child: Center(
           child: Column(
             children: <Widget>[
-              Text('flutter'),
-              TextField(),
-              ElevatedButton(child: const Text(''), onPressed: () {})
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: Text('flutter'),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                child: TextField(),
+              ),
+              Padding(
+                  padding: EdgeInsets.all(15),
+                  child:
+                      ElevatedButton(child: const Text(''), onPressed: () {}))
             ],
           ),
         ),
